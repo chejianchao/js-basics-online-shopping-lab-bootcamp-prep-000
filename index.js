@@ -26,11 +26,16 @@ function viewCart() {
       str += " and"
     str += ` ${item.itemName} at $${item.itemPrice}`
   }
-  bananas at $17, pancake batter at $5, and eggs at $49
+  return str;
 }
 
 function total() {
   // write your code here
+  var sum = 0;
+  for( var item in cart ){
+    sum+= item.itemPrice
+  }
+  return sum
 }
 
 function removeFromCart(item) {
